@@ -12,5 +12,12 @@
     cd snapdrop
     docker-compose up -d
 ```
+## Дополнительная настройка на Windows
 
-Более подробная информация и фиксы возможных ошибок в [исходом репозитории.](https://github.com/RobinLinus/snapdrop)
+Чтобы исправить ошибку, связанную с файлом /docker/openssl/create.sh небходимо через notepad++ преобразовать символы окончания строки в юниксовские
+```Open file create.sh > Edit > EOL Conversion > Unix (LF)```
+
+
+
+
+Более подробная информация и фиксы других возможных ошибок в [исходом репозитории.](https://github.com/RobinLinus/snapdrop)
