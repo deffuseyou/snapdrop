@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Web App Config -->
-    <title>Snapdrop</title>
+    <title>send.media</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#3367d6">
     <meta name="color-scheme" content="dark light">
@@ -38,17 +38,17 @@
 
 <body translate="no">
     <header class="row-reverse">
-        <a href="#" id="theme" class="icon-button" title="Switch Darkmode/Lightmode" >
+        <a href="#" id="theme" class="icon-button" title="Сменить тему" >
             <svg class="icon">
                 <use xlink:href="#icon-theme" />
             </svg>
         </a>
-        <a href="#" id="notification" class="icon-button" title="Enable Notifications" hidden>
+        <a href="#" id="notification" class="icon-button" title="Включить уведомления" hidden>
             <svg class="icon">
                 <use xlink:href="#notifications" />
             </svg>
         </a>
-        <a href="#" id="install" class="icon-button" title="Install Snapdrop" hidden>
+        <a href="#" id="install" class="icon-button" title="Установить" hidden>
             <svg class="icon">
                 <use xlink:href="#homescreen" />
             </svg>
@@ -57,23 +57,23 @@
     <!-- Peers -->
     <x-peers class="center"></x-peers>
 <x-no-peers>
-        <h2>Откройте Snapdrop на других устройствах, чтобы отправлять файлы</h2>
+        <h2>Откройте send.media на других устройствах, чтобы отправлять файлы</h2>
     </x-no-peers>
-    <x-instructions desktop="Нажмите, чтобы отправить файлы, или щелкните правой кнопкой мыши, чтобы отправить сообщение" mobile="Коснитесь, чтобы отправить файлы, или долго нажмите, чтобы отправить сообщение"></x-instructions>
+    <x-instructions desktop="Нажмите, чтобы отправить файлы, или щелкните правой кнопкой мыши, чтобы отправить сообщение" mobile="Нажмите, чтобы отправить файлы, или удерживайте, чтобы отправить сообщение"></x-instructions>
     <!-- Footer -->
     <footer class="column">
         <svg class="icon logo">
             <use xlink:href="#wifi-tethering" />
         </svg>
         <div id="displayName" placeholder="Самый простой способ передачи данных между устройствами"></div>
-        <div class="font-body2">Вас может обнаружить каждый на этой сети</div>
+        <div class="font-body2">Вы доступны для обнаружения</div>
     </footer>
     <!-- Receive Dialog -->
     <x-dialog id="receiveDialog">
         <x-background class="full center">
             <x-paper shadow="2">
                 <h3>Файл получен</h3>
-                <div class="font-subheading" id="fileName">Имя файла</div>
+                <div class="font-subheading" id="fileName">Название файла</div>
                 <div class="font-body2" id="fileSize"></div>
                 <div class='preview' style="visibility: hidden;">
                     <img id='img-preview' src="">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="row-reverse">
                     <a class="button" close id="download" title="Скачать файл" autofocus>Сохранить</a>
-                    <button class="button" close>Игнорировать</button>
+                    <button class="button" close>Отмена</button>
                 </div>
             </x-paper>
         </x-background>
@@ -95,7 +95,7 @@
             <x-background class="full center">
                 <x-paper shadow="2">
                     <h3>Отправить сообщение</h3>
-                    <div id="textInput" class="textarea" role="textbox" placeholder="Отправить сообщение" autocomplete="off" autofocus contenteditable></div>
+                    <div id="textInput" class="textarea" role="textbox" placeholder="Введите сообщение" autocomplete="off" autofocus contenteditable></div>
                     <div class="row-reverse">
                         <button class="button" type="submit" close>Отправить</button>
                         <a class="button" close>Отмена</a>
@@ -121,46 +121,6 @@
     <div class="toast-container full center">
         <x-toast class="row" shadow="1" id="toast">Передача файла завершена</x-toast>
     </div>
-    <!-- About Page -->
-    <x-about id="about" class="full center column">
-        <section class="center column fade-in">
-            <header class="row-reverse">
-                <a href="#" class="close icon-button">
-                    <svg class="icon">
-                        <use xlink:href="#close" />
-                    </svg>
-                </a>
-            </header>
-            <svg class="icon logo">
-                <use xlink:href="#wifi-tethering" />
-            </svg>
-            <h1>Snapdrop</h1>
-            <div class="font-subheading">The easiest way to transfer files across devices</div>
-            <div class="row">
-                <a class="icon-button" target="_blank" href="https://github.com/RobinLinus/snapdrop" title="Snapdrop on Github" rel="noreferrer">
-                    <svg class="icon">
-                        <use xlink:href="#github" />
-                    </svg>
-                </a>
-                <a class="icon-button" target="_blank" href="https://www.paypal.com/donate?hosted_button_id=FTP9DXUR7LA7Q" title="Help cover the server costs!" rel="noreferrer">
-                    <svg class="icon">
-                        <use xlink:href="#monetarization" />
-                    </svg>
-                </a>
-                <a class="icon-button" target="_blank" href="https://twitter.com/intent/tweet?text=https://snapdrop.net%20by%20@robin_linus%20&" title="Tweet about Snapdrop" rel="noreferrer">
-                    <svg class="icon">
-                        <use xlink:href="#twitter" />
-                    </svg>
-                </a>
-                <a class="icon-button" target="_blank" href="https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md" title="Frequently asked questions" rel="noreferrer">
-                    <svg class="icon">
-                        <use xlink:href="#help-outline" />
-                    </svg>
-                </a>
-            </div>
-        </section>
-        <x-background></x-background>
-    </x-about>
     <!-- SVG Icon Library -->
     <svg style="display: none;">
         <symbol id=wifi-tethering viewBox="0 0 24 24">
@@ -219,8 +179,8 @@
     <!-- no script -->
     <noscript>
         <x-noscript class="full center column">
-            <h1>Enable JavaScript</h1>
-            <h3>Snapdrop works only with JavaScript</h3>
+            <h1>Включите JavaScript</h1>
+            <h3>Snapdrop работает только с JavaScript</h3>
         </x-noscript>
         <style>
         x-noscript {
