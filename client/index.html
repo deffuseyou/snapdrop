@@ -38,11 +38,6 @@
 
 <body translate="no">
     <header class="row-reverse">
-        <a href="#about" class="icon-button" title="About Snapdrop">
-            <svg class="icon">
-                <use xlink:href="#info-outline" />
-            </svg>
-        </a>
         <a href="#" id="theme" class="icon-button" title="Switch Darkmode/Lightmode" >
             <svg class="icon">
                 <use xlink:href="#icon-theme" />
@@ -61,35 +56,35 @@
     </header>
     <!-- Peers -->
     <x-peers class="center"></x-peers>
-    <x-no-peers>
-        <h2>Open Snapdrop on other devices to send files</h2>
+<x-no-peers>
+        <h2>Откройте Snapdrop на других устройствах, чтобы отправлять файлы</h2>
     </x-no-peers>
-    <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions>
+    <x-instructions desktop="Нажмите, чтобы отправить файлы, или щелкните правой кнопкой мыши, чтобы отправить сообщение" mobile="Коснитесь, чтобы отправить файлы, или долго нажмите, чтобы отправить сообщение"></x-instructions>
     <!-- Footer -->
     <footer class="column">
         <svg class="icon logo">
             <use xlink:href="#wifi-tethering" />
         </svg>
-        <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
-        <div class="font-body2">You can be discovered by everyone on this network</div>
+        <div id="displayName" placeholder="Самый простой способ передачи данных между устройствами"></div>
+        <div class="font-body2">Вас может обнаружить каждый на этой сети</div>
     </footer>
     <!-- Receive Dialog -->
     <x-dialog id="receiveDialog">
         <x-background class="full center">
             <x-paper shadow="2">
-                <h3>File Received</h3>
-                <div class="font-subheading" id="fileName">Filename</div>
+                <h3>Файл получен</h3>
+                <div class="font-subheading" id="fileName">Имя файла</div>
                 <div class="font-body2" id="fileSize"></div>
                 <div class='preview' style="visibility: hidden;">
                     <img id='img-preview' src="">
                 </div>
                 <div class="row">
-                    <label for="autoDownload" class="grow">Ask to save each file before downloading</label>
+                    <label for="autoDownload" class="grow">Спрашивать о сохранении каждого файла перед загрузкой</label>
                     <input type="checkbox" id="autoDownload" checked="">
                 </div>
                 <div class="row-reverse">
-                    <a class="button" close id="download" title="Download File" autofocus>Save</a>
-                    <button class="button" close>Ignore</button>
+                    <a class="button" close id="download" title="Скачать файл" autofocus>Сохранить</a>
+                    <button class="button" close>Игнорировать</button>
                 </div>
             </x-paper>
         </x-background>
@@ -99,11 +94,11 @@
         <form action="#">
             <x-background class="full center">
                 <x-paper shadow="2">
-                    <h3>Send a Message</h3>
-                    <div id="textInput" class="textarea" role="textbox" placeholder="Send a message" autocomplete="off" autofocus contenteditable></div>
+                    <h3>Отправить сообщение</h3>
+                    <div id="textInput" class="textarea" role="textbox" placeholder="Отправить сообщение" autocomplete="off" autofocus contenteditable></div>
                     <div class="row-reverse">
-                        <button class="button" type="submit" close>Send</button>
-                        <a class="button" close>Cancel</a>
+                        <button class="button" type="submit" close>Отправить</button>
+                        <a class="button" close>Отмена</a>
                     </div>
                 </x-paper>
             </x-background>
@@ -113,18 +108,18 @@
     <x-dialog id="receiveTextDialog">
         <x-background class="full center">
             <x-paper shadow="2">
-                <h3>Message Received</h3>
+                <h3>Сообщение получено</h3>
                 <div class="font-subheading" id="text"></div>
                 <div class="row-reverse">
-                    <button class="button" id="copy" close autofocus>Copy</button>
-                    <button class="button" close>Close</button>
+                    <button class="button" id="copy" close autofocus>Копировать</button>
+                    <button class="button" close>Закрыть</button>
                 </div>
             </x-paper>
         </x-background>
     </x-dialog>
     <!-- Toast -->
     <div class="toast-container full center">
-        <x-toast class="row" shadow="1" id="toast">File Transfer Completed</x-toast>
+        <x-toast class="row" shadow="1" id="toast">Передача файла завершена</x-toast>
     </div>
     <!-- About Page -->
     <x-about id="about" class="full center column">

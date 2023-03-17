@@ -12,7 +12,15 @@ process.on('SIGTERM', () => {
 })
 
 const parser = require('ua-parser-js');
-const { uniqueNamesGenerator, animals, colors } = require('unique-names-generator');
+const { uniqueNamesGenerator } = require('unique-names-generator');
+
+const a = [
+  'Мальнький',
+  'Тольстый'
+];
+const b = [
+  'Хуек', 'а Залупа'
+]
 
 class SnapdropServer {
 
@@ -227,7 +235,7 @@ class Peer {
         const displayName = uniqueNamesGenerator({
             length: 2,
             separator: ' ',
-            dictionaries: [colors, animals],
+            dictionaries: [a, b],
             style: 'capital',
             seed: this.id.hashCode()
         })
