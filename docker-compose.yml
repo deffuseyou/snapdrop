@@ -19,7 +19,6 @@ services:
       - ./docker/openssl:/mnt/openssl
     ports:
       - "81:80"
-      - "444:443"
     env_file: ./docker/fqdn.env
     entrypoint: /mnt/openssl/create.sh
     command: ["nginx", "-g", "daemon off;"]
