@@ -8,9 +8,9 @@
 
 Клонируй репозиторий:
 ```
-    git clone https://github.com/deffuseyou/snapdrop.git
-    cd snapdrop
-    docker-compose up -d
+git clone https://github.com/deffuseyou/snapdrop.git
+cd snapdrop
+docker-compose up -d
 ```
 ## Дополнительная настройка на Windows
 
