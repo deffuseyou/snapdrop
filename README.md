@@ -18,3 +18,11 @@ docker-compose up -d
 
 Это можно сделать через notepad++
 ```Edit > EOL Conversion > Unix (LF)```
+
+## Дополнительная настройка на Linux
+
+Исправить ошибку, связанную с npm
+```
+sudo chown -R $USER ./server
+sudo chmod -R 777 ./server
+```
