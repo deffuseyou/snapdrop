@@ -5,7 +5,7 @@ services:
     user: "node"
     working_dir: /home/node/app
     volumes:
-      - ./server/:/home/node/app
+      - ./server/:/home/node/app:deligated
     command: ash -c "npm i && node index.js"
   nginx:
     build:
